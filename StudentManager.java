@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class StudentManager {
-	private StudentInfor stInfor;
+	private StudentInfor stInfor=null;
     public static Scanner scanner = new Scanner(System.in);
-    private List<SinhVien> stList;
+    List<SinhVien> stList=new ArrayList<SinhVien>()  ;
 	
 	public StudentManager(StudentInfor stInfor, List<SinhVien> stList) {
 		super();
@@ -25,12 +25,12 @@ public class StudentManager {
 		String name;
 		System.out.println("NHAP NAME SINH VIEN");
 		name=scanner.next();
-		sv.getName();
+		sv.setName(name);
 		
 		String id;
 		System.out.println("NHAP MSSV SINH VIEN");
 		id=scanner.next();
-		sv.getId();
+		sv.setId(id);
 		
 		int age;
 		System.out.println("NHAP TUOI SINH VIEN");
@@ -42,7 +42,7 @@ public class StudentManager {
 		pt=scanner.nextFloat();
 		sv.setGpa(pt);
 		stList.add(sv);
-		stInfor.write(stList);
+//		stInfor.write(stList);
 	}
 	public void show() {
 		for (SinhVien sinhvien : stList) {

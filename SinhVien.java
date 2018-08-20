@@ -36,6 +36,9 @@ public class SinhVien implements Serializable {
 	public void setGpa(float gpa) {
 		this.gpa = gpa;
 	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	
 	
 }
